@@ -11,11 +11,11 @@ html {
   font-size: 16px;
 }
 
-@import '_button';
-@import '_paragraph';
-@import '_title';
 @import '_spacing';
-@import '_app-header';
-@import '_app-content';
-@import '_app-section';
-@import '_app-footer';
+@import './misc/_button';
+@import './misc/_paragraph';
+@import './misc/_title';
+@import './layout/_app-header';
+@import './layout/_app-content';
+@import './layout/_app-section';
+@import './layout/_app-footer';
