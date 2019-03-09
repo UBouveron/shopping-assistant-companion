@@ -1,0 +1,44 @@
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+@function calculateSpacing($index) {
+  @if $index == 0 {
+    @return 0;
+  }
+  @return 0.25 + pow($index, 1.35) * 0.25;
+}
+
+@mixin spacing($property, $prefix, $suffix: '') {
+  @for $i from 0 through 10 {
+    .#{$prefix}-#{$i}#{$suffix} {
+      #{$property}: #{calculateSpacing($i)}rem;
+    }
+  }
+}
+
+@mixin spacingTBRL($property, $breakpoint: '') {
+  $prefix: str-slice($property, 1, 1);
+  $suffix: '';
+  @if str-length($breakpoint) > 0 {
+    $suffix: -#{$breakpoint};
+  }
+
+  @include spacing(#{$property}, #{$prefix}, $suffix);
+  @include spacing(#{$property}-top, #{$prefix}t, $suffix);
+  @include spacing(#{$property}-bottom, #{$prefix}b, $suffix);
+  @include spacing(#{$property}-left, #{$prefix}l, $suffix);
+  @include spacing(#{$property}-right, #{$prefix}r, $suffix);
+}
+
+
+@include spacingTBRL('margin');
+@include spacingTBRL('padding');

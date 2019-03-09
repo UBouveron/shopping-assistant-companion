@@ -1,0 +1,19 @@
+.button {
+  appearance: none;
+  display: block;
+  min-width: 250px;
+  background: transparent;
+  line-height: 37px;
+  padding: 6px 32px;
+  margin: 0;
+  box-shadow: none;
+  border: 3px solid $theme-color;
+  border-radius: 30px;
+  outline: none;
+  color: $theme-color;
+  font-weight: 700;
+  font-family: $default-font;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}

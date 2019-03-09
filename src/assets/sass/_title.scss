@@ -1,0 +1,11 @@
+.title2 {
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 100;
+  color: #000000;
+
+  &__emphasis {
+    font-weight: 700;
+    color: $theme-color;
+  }
+}
