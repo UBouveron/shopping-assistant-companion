@@ -1,19 +1,24 @@
 .button {
   appearance: none;
   display: block;
-  min-width: 250px;
+  min-width: 225px;
   background: transparent;
   line-height: 37px;
-  padding: 6px 32px;
+  padding: 6px 24px;
   margin: 0;
   box-shadow: none;
-  border: 3px solid $theme-color;
+  border: 3px solid #ffffff;
   border-radius: 30px;
   outline: none;
-  color: $theme-color;
+  color: #ffffff;
   font-weight: 700;
   font-family: $default-font;
-  font-size: 30px;
+  font-size: 24px;
   text-transform: uppercase;
   text-align: center;
+
+  &--magenta {
+    border-color: $theme-color;
+    color: $theme-color;
+  }
 }

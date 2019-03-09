@@ -1,3 +1,28 @@
 .app-footer {
-  
+  background: #1E1E1E;
+  color: #707070;
+  padding: 28px 0;
+  font-weight: 300;
+
+  .app-wrapper-sm {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 28px;
+
+    a {
+      margin-right: 24px;
+      color: #707070;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

@@ -1,0 +1,42 @@
+.article {
+  display: flex;
+  
+  &--intro {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 675px;
+  }
+
+  &__title {
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 100;
+    color: #ffffff;
+    margin-bottom: 32px;
+
+    &--black {
+      color: #000000;
+    }
+  }
+
+  &__paragraph {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 32px;
+
+    &--grey {
+      color: #707070;
+    }
+  }
+
+  .emphasis {
+    font-weight: 700;
+
+    &--magenta {
+      color: $theme-color;
+    }
+  }
+}

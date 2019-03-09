@@ -11,11 +11,10 @@ html {
   font-size: 16px;
 }
 
-@import '_spacing';
 @import './misc/_button';
-@import './misc/_paragraph';
-@import './misc/_title';
+@import './misc/_article';
 @import './layout/_app-header';
+@import './layout/_app-wrapper';
 @import './layout/_app-content';
 @import './layout/_app-section';
 @import './layout/_app-footer';

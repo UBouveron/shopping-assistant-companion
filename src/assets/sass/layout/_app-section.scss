@@ -1,5 +1,9 @@
 .app-section {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  &--intro {
+    background: linear-gradient(90deg, #ffffff 10%, #f1f1f1 40%);
+  }
+
+  &--demo {
+    background: linear-gradient(#FB25B4, #F21F59);
+  }
 }
