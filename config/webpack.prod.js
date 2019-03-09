@@ -1,20 +1,7 @@
-const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
-const PATHS = require('./paths');
+var merge = require('webpack-merge');
 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+var base = require('./webpack.base.js');
 
-module.exports = merge(baseConfig, {
+module.exports = merge(base, {
   mode: 'production',
-  output: {
-    path: PATHS.DIST,
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[id].bundle.js'
-  },
-  plugins: [
-    new CleanWebpackPlugin(PATHS.DIST, {
-      root: PATHS.ROOT,
-      verbose: true
-    })
-  ]
 });

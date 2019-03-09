@@ -1,20 +1,23 @@
-const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
-const PATHS = require('./paths');
+var path = require('path');
+var merge = require('webpack-merge');
+var HtmlWebpackReloadPlugin = require('html-webpack-reload-plugin');
 
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var PATHS = require('./paths.js');
+var base = require('./webpack.base.js');
 
-module.exports = merge(baseConfig, {
+module.exports = merge(base, {
   mode: 'development',
   output: {
     publicPath: '/'
   },
   devServer: {
-    port: 8080,
-    historyApiFallback: true,
+    contentBase: '/',
+    port: 5000,
+    compress: false,
     watchContentBase: true,
-    open: true
+    historyApiFallback: true
   },
-  devtool: 'cheap-eval-source-map',
-  plugins: [ ]
+  plugins: [
+    new HtmlWebpackReloadPlugin()
+  ]
 });

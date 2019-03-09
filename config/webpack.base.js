@@ -1,67 +1,46 @@
-const path = require('path');
-const PATHS = require('./paths');
-const alias = require('./alias');
-const webpack = require('webpack');
-const webpackMode = require('webpack-mode');
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// plugins
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var PATHS = require('./paths.js');
+var ALIAS = require('./alias.js');
 
 module.exports = {
-  entry: {
-    bundle: [
-      '@babel/polyfill',
-      path.join(PATHS.SRC, 'index.tsx'),
-      path.join(PATHS.STYLES, 'styles.scss')
-    ]
+  entry: [
+    '@babel/polyfill',
+    path.join(PATHS.APP, 'index.js')
+  ],
+  output: {
+    filename: 'bundle.js',
+    path: PATHS.DIST,
   },
   resolve: {
     modules: ['node_modules', PATHS.SRC],
-    extensions: ['.ts', '.js', '.jsx', '.tsx', '.json', '.scss', '.css', '.yml', '.mp3'],
-    alias: {
-      ...alias,
-      three$: 'three/build/three.min.js',
-      'three/.*$': 'three'
-    }
+    extensions: ['.js', '.json', '.scss', '.css'],
+    alias: ALIAS,
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.js?$/,
         exclude: '/node_modules/',
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env'],
+          plugins: ['@babel/plugin-proposal-object-rest-spread']
+        }
       },
       {
-        test: /\.tsx?$/,
-        enforce: 'pre',
-        exclude: '/node_modules/',
-        loader: 'tslint-loader'
-      },
-      {
-        test: /\.(css|scss|sass)$/,
+        test: /\.(css|s(c|a)ss)$/,
         use: [
-          webpackMode.isDevelopment
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [
-                require('autoprefixer')({
-                  browsers: ['>1%', 'last 4 versions', 'Firefox ESR', 'not ie < 9'],
-                  flexbox: 'no-2009'
-                })
-              ]
-            }
-          },
+          'postcss-loader',
           'sass-loader',
           {
             loader: 'sass-resources-loader',
             options: {
               resources: [
-                path.join(PATHS.STYLES, 'abstracts', '_variables.scss'),
+                path.join(PATHS.SASS, '_globals.scss'),
               ]
             }
           }
@@ -73,25 +52,11 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: webpackMode.isProduction
-                ? '/images/[name]_[hash:8].[ext]'
-                : '[name]_[hash:8].[ext]'
+              name: '[name].[ext]',
+              outputPath: 'images/'
             }
           }
         ]
-      },
-      {
-        test: /\.glsl$/,
-        loader: 'webpack-glsl-loader'
-      },
-      {
-        test: /\.(obj|mtl)$/,
-        loader: 'file-loader',
-        options: {
-          name: webpackMode.isProduction
-            ? '/objects/[name]/[hash:8].[ext]'
-            : '[name].[ext]'
-        }
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
@@ -103,44 +68,15 @@ module.exports = {
           }
         }]
       },
-      {
-        test: /\.ya?ml$/,
-        use: 'js-yaml-loader',
-      },
-      {
-        test: /\.mp3$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: webpackMode.isProduction
-                ? '/sounds/[name]_[hash:8].[ext]'
-                : '[name]_[hash:8].[ext]'
-            }
-          }
-        ]
-      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(PATHS.SRC, 'index.html'),
-      favicon: './src/public/assets/images/favicon.png',
+      favicon: path.join(PATHS.ASSETS, 'favicon.ico'),
       filename: 'index.html',
       inject: 'body',
-      hash: true
+      hash: true,
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
-    }),
-    new webpack.ProvidePlugin({
-      THREE: 'three'
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(webpackMode.isDevelopment ? 'development' : 'production')
-      }
-    })
   ]
 };
