@@ -41,6 +41,7 @@ module.exports = {
           'style-loader',
           'css-loader',
           'postcss-loader',
+          'resolve-url-loader',
           'sass-loader',
           {
             loader: 'sass-resources-loader',

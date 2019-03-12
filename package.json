@@ -13,7 +13,9 @@
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
     "html-loader": "^0.5.5",
-    "reset-css": "^4.0.1"
+    "reset-css": "^4.0.1",
+    "resolve-url-loader": "^3.0.1",
+    "url-loader": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
