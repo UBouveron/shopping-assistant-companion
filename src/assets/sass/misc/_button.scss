@@ -16,9 +16,10 @@
   font-size: 24px;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
 
-  &--magenta {
-    border-color: $theme-color;
-    color: $theme-color;
+  &--red {
+    border-color: $red;
+    color: $red;
   }
 }
