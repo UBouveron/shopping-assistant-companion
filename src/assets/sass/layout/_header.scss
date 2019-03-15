@@ -14,7 +14,6 @@
   }
 }
 
-
 .header-title {
   display: none;
   align-items: center;
@@ -70,6 +69,7 @@
     img {
       width: 100%;
       height: auto;
+      max-height: 48px;
 
       @include breakpoint-laptop {
         width: auto;

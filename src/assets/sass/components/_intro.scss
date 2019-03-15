@@ -1,3 +1,18 @@
+.app {
+  width: 100%;
+  margin-bottom: 32px;
+
+  img {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint-laptop {
+    display: none;
+  }
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -12,9 +27,11 @@
     font-size: 36px;
     line-height: 46px;
     margin-bottom: 16px;
+    text-align: center;
     color: #000;
 
     @include breakpoint-tablet {
+      text-align: left;
       font-size: 70px;
       line-height: 80px;
       margin-bottom: 32px;
@@ -27,12 +44,14 @@
     line-height: 26px;
     font-weight: 400;
     color: #7c7c7c;
+    text-align: center;
     margin-bottom: 38px;
 
     @include breakpoint-tablet {
       font-size: 24px;
       line-height: 32px;
       margin-bottom: 48px;
+      text-align: left;
     }
   }
 
