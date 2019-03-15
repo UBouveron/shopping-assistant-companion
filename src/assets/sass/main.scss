@@ -12,7 +12,7 @@ html {
   font-size: 16px;
 }
 
-.align-left {
+@import './mixins/_breakpoints';
 
 @import './components/_button';
 @import './components/_feature';

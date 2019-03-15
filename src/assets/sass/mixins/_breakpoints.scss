@@ -1,0 +1,21 @@
+// breakpoints
+
+@mixin breakpoint-tablet {
+  @media only screen and (min-width: $breakpoint-tablet) { @content; }
+}
+
+@mixin breakpoint-tablet-portrait {
+  @media only screen and (min-width: $breakpoint-tablet) and (orientation: portrait) { @content; }
+}
+
+@mixin breakpoint-tablet-landscape {
+  @media only screen and (min-width: $breakpoint-tablet) and (orientation: landscape) { @content; }
+}
+
+@mixin breakpoint-laptop {
+  @media only screen and (min-width: $breakpoint-laptop) { @content; }
+}
+
+@mixin breakpoint-desktop {
+  @media only screen and (min-width: $breakpoint-desktop) { @content; }
+}
