@@ -4,20 +4,17 @@
   justify-content: center;
   flex-direction: column;
 
-  &--right {
+  &#feature-col-right {
     justify-content: space-between;
+    .feature {
+      text-align: left;
+    }
   }
-}
 
-.platforms {
-  display: flex;
-  align-items: center;
-
-  li {
-    margin-right: 24px;
-
-    &:last-child {
-      margin-right: 0;
+  &#feature-col-left {
+    justify-content: center;
+    .feature {
+      text-align: right;
     }
   }
 }
@@ -56,12 +53,25 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+}
 
-  .emphasis {
-    font-weight: 700;
+.platforms {
+  display: flex;
+  align-items: center;
 
-    &--red {
-      color: $red;
+  li {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
     }
+  }
+}
+
+.emphasis {
+  font-weight: 700;
+
+  &--red {
+    color: $red;
   }
 }
