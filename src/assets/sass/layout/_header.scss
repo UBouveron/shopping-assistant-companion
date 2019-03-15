@@ -16,7 +16,7 @@
 
 
 .header-title {
-  display: flex;
+  display: none;
   align-items: center;
   width: 100%;
 
@@ -42,6 +42,10 @@
       /*box-shadow: 0 20px 50px 0 rgba(0,0,0,.15);*/
     }
   }
+
+  @include breakpoint-laptop {
+    display: flex;
+  }
 }
 
 .header-download {
@@ -52,7 +56,27 @@
   flex-wrap: nowrap;
 
   a {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
     margin-right: 24px;
+
+    @include breakpoint-laptop {
+      width: auto;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @include breakpoint-laptop {
+        width: auto;
+        height: 48px;
+      }
+    }
+
     &:last-child {
       margin-right: 0;
     }
