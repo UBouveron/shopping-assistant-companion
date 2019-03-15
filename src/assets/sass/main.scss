@@ -2,6 +2,21 @@
 
 @import url('https://use.typekit.net/pho1een.css');
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-thin';
+  src: url('../fonts/Roboto-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-bold';
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
