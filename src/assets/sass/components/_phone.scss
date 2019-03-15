@@ -10,10 +10,10 @@
   width: 250px;
   height: 520px;
   z-index: 10;
-  margin: 0 80px;
+  margin: 54px 80px 78px 80px;
 
-  @media only screen and (min-width: 1024px) {
-    
+  @include breakpoint-laptop {
+    margin: 0 80px 36px 80px;
   }
 
   &:after {
@@ -35,10 +35,6 @@
     width: 234px;
     height: 420px;
     background: #221E1E;
-
-    @media only screen and (min-width: 1024px) {
-      
-    }
 
     video {
       display: block;

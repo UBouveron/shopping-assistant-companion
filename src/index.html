@@ -2,18 +2,18 @@
 <html lang='fr'>
   <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Shopping Assistant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="">
      <!-- Open Graph -->
      <meta property="og:type" content="website">
-     <meta property="og:title" content="">
+     <meta property="og:title" content="Shopping Assistant">
      <meta property="og:url" content="">
      <meta property="og:image" content="">
      <meta property="og:description" content="">
      <!-- Twitter -->
      <meta name="twitter:card" content="summary">
-     <meta name="twitter:site_name" content="">
+     <meta name="twitter:site_name" content="Shopping Assistant">
      <meta name="twitter:description" content="">
      <meta name="twitter:image" content="">
   </head>
@@ -27,8 +27,8 @@
             </a>
           </h1>
           <div class="header-download">
-            <a href="#"><img class="download-icon" height="48" src="./assets/images/app_store_badge.svg" alt="Télécharger l'application sur l'App Store" /></a>
-            <a href="#"><img class="download-icon" height="48" src="./assets/images/google_play_badge.svg" alt="Télécharger l'application sur Google Play" /></a>
+            <a href="#"><img class="download-icon" src="./assets/images/app_store_badge.svg" alt="Télécharger l'application sur l'App Store" /></a>
+            <a href="#"><img class="download-icon" src="./assets/images/google_play_badge.svg" alt="Télécharger l'application sur Google Play" /></a>
           </div>
       </div>
     </header>
@@ -37,6 +37,9 @@
         <section id="intro" class="section">
           <div class="wrapper">
             <div class="intro">
+              <div class="app">
+                <img src="./assets/images/logo.svg" alt="App icon" />
+              </div>
               <h2>Des <span class="emphasis emphasis--red">envies</span> et des <span class="emphasis emphasis--red">économies</span> !</h2>
               <p>Lorem ipsum et caetera pourquoi vous en avez absolument besoin, c'est la nouvelle meilleure application...</p>
               <a data-scroll href="#demo" class="button button--red">
@@ -58,7 +61,7 @@
         <section id="demo" class="section">
           <div class="wrapper">
             <div id="feature-col-left" class="features-col">
-                <div class="feature" data-aos="fade-right" data-aos-offset="250" data-aos-anchor="#demo" data-aos-duration="500" data-aos-delay="500">
+                <div class="feature" data-aos="fade-right" data-aos-offset="250" data-aos-anchor="#demo" data-aos-duration="500" data-aos-delay="500" data-aos-once="true">
                   <h3>Créez des listes avec vos proches</h3>
                   <p>Vous pouvez ajouter n'importe quel produit à vos listes d'envies et les partager si vous le souhaitez.</p>
                 </div>
@@ -71,12 +74,12 @@
               </div>
             </div>
             <div id="feature-col-right" class="features-col">
-                <div class="feature" data-aos="fade-left" data-aos-offset="250" data-aos-anchor="#demo" data-aos-duration="500" data-aos-delay="750">
+                <div class="feature" data-aos="fade-left" data-aos-offset="250" data-aos-anchor="#demo" data-aos-duration="500" data-aos-delay="750" data-aos-once="true">
                   <h3>Ayez l'esprit tranquille</h3>
                   <p>Plus besoin de surveiller les prix et les stocks, les notifications le font pour vous !</p>
                 </div>
                
-                <div class="feature" data-aos="fade-left" data-aos-offset="250" data-aos-anchor="#demo" data-aos-duration="500" data-aos-delay="1000">
+                <div class="feature" data-aos="fade-left" data-aos-offset="250" data-aos-anchor="#demo" data-aos-duration="500" data-aos-delay="1000" data-aos-once="true">
                   <h3>Suivez vos sites préférés</h3>
                   <ul class="platforms">
                     <li><img width="100" src="./assets/images/amazon.svg" alt="Amazon" /></li>
@@ -89,7 +92,7 @@
     </main>
     <footer class="footer">
         <div class="wrapper-sm">
-          2018 © Bouveron, Kimoko, Metter-Rothan, Vilsaint
+          <p class="footer-credits">2018 © Bouveron, Kimoko, Metter-Rothan, Vilsaint</p>
           <nav class="footer-menu">
             <a href="#">Contact</a>
             <a href="#">Politique de confidentialité</a>

@@ -1,3 +1,18 @@
+.app {
+  width: 100%;
+  margin-bottom: 32px;
+
+  img {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint-laptop {
+    display: none;
+  }
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -7,24 +22,51 @@
 
   h2 {
     width: 100%;
-    font-size: 70px;
-    font-family: $default-thin;
+    font-family: $default-font;
+    font-weight: 100;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 16px;
+    text-align: center;
     color: #000;
-    line-height: 80px;
-    margin-bottom: 32px;
+
+    @include breakpoint-tablet {
+      text-align: left;
+      font-size: 70px;
+      line-height: 80px;
+      margin-bottom: 32px;
+    }
   }
 
   p {
     width: 100%;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 400;
     color: #7c7c7c;
-    margin-bottom: 48px;
+    text-align: center;
+    margin-bottom: 38px;
+
+    @include breakpoint-tablet {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 48px;
+      text-align: left;
+    }
+  }
+
+  .button {
+    width: 100%;
+    max-width: 375px;
+
+    @include breakpoint-tablet {
+      width: auto;
+    }
   }
 
   .emphasis {
-    font-family: $default-bold;
+    font-family: $default-font;
+    font-weight: bold;
 
     &--red {
       color: $red;
