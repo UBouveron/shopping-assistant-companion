@@ -10,7 +10,11 @@
   width: 250px;
   height: 520px;
   z-index: 10;
-  margin: 0 80px;
+  margin: 48px 80px 74px 80px;
+
+  @include breakpoint-laptop {
+    margin: 0 80px 36px 80px;
+  }
 
   &:after {
     content: '';

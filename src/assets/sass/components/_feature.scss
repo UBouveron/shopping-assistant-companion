@@ -6,6 +6,7 @@
 
   &#feature-col-right {
     justify-content: space-between;
+
     .feature {
       text-align: left;
     }
@@ -13,8 +14,11 @@
 
   &#feature-col-left {
     justify-content: center;
+
     .feature {
-      text-align: right;
+      @include breakpoint-laptop {
+        text-align: right;
+      }
     }
   }
 }
@@ -26,6 +30,10 @@
   width: 100%;
   max-width: 350px;
   margin-bottom: 48px;
+    
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   h3 {
     width: 100%;
@@ -48,10 +56,6 @@
     &:last-of-type {
       margin-bottom: 0;
     }
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
   }
 }
 
