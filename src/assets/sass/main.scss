@@ -1,21 +1,7 @@
 @import 'reset-css';
 
 @import url('https://use.typekit.net/pho1een.css');
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Roboto-thin';
-  src: url('../fonts/Roboto-Thin.ttf');
-}
-
-@font-face {
-  font-family: 'Roboto-bold';
-  src: url('../fonts/Roboto-Bold.ttf');
-}
+@import './fonts';
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -27,17 +13,12 @@ html {
 }
 
 .align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
 
 @import './components/_button';
 @import './components/_feature';
 @import './components/_intro';
 @import './components/_phone';
+
 @import './layout/_wrapper';
 @import './layout/_header';
 @import './layout/_content';

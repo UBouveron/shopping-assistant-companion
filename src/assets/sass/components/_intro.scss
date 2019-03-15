@@ -8,7 +8,8 @@
   h2 {
     width: 100%;
     font-size: 70px;
-    font-family: $default-thin;
+    font-family: $default-font;
+    font-weight: 100;
     color: #000;
     line-height: 80px;
     margin-bottom: 32px;
@@ -24,7 +25,8 @@
   }
 
   .emphasis {
-    font-family: $default-bold;
+    font-family: $default-font;
+    font-weight: bold;
 
     &--red {
       color: $red;
