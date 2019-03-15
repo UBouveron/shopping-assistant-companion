@@ -8,7 +8,9 @@
     justify-content: space-between;
 
     .feature {
-      text-align: left;
+      @include breakpoint-laptop {
+        text-align: left;
+      }
     }
   }
 
@@ -30,6 +32,7 @@
   width: 100%;
   max-width: 350px;
   margin-bottom: 48px;
+  text-align: center;
     
   &:last-of-type {
     margin-bottom: 0;
@@ -61,7 +64,9 @@
 
 .platforms {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 
   li {
     margin-right: 24px;
@@ -69,6 +74,10 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  @include breakpoint-laptop {
+    justify-content: flex-start;
   }
 }
 
