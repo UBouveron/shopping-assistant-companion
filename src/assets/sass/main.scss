@@ -19,12 +19,12 @@ html {
   text-align: right;
 }
 
-@import './misc/_button';
-@import './misc/_feature';
-@import './misc/_intro';
-@import './misc/_phone';
+@import './components/_button';
+@import './components/_feature';
+@import './components/_intro';
+@import './components/_phone';
 @import './layout/_wrapper';
-@import './layout/_app-header';
-@import './layout/_app-content';
-@import './layout/_app-section';
-@import './layout/_app-footer';
+@import './layout/_header';
+@import './layout/_content';
+@import './layout/_section';
+@import './layout/_footer';
