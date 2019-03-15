@@ -19,7 +19,7 @@
   </head>
   <body>
     <header id="header" class="app-header">
-      <div class="app-wrapper-sm">
+      <div class="wrapper-sm">
           <h1 class="app-header__title">
             <a href="#">
               <img src="./assets/images/logo.svg" height="48" alt="Assistant Shopping">
@@ -35,23 +35,49 @@
     <div class="app-content">
         <!-- INTRODUCTION -->
         <section id="intro" class="app-section app-section--intro">
-          <div class="app-wrapper">
-            <article class="article article--intro">
-              <h2 class="article__title article__title--black">Des <span class="emphasis emphasis--red">envies</span> et des <span class="emphasis emphasis--red">économies</span> !</h2>
-              <p class="article__paragraph article__paragraph--grey">Lorem ipsum et caetera pourquoi vous en avez absolument besoin, c'est la nouvelle meilleure application...</p>
+          <div class="wrapper">
+            <div class="intro">
+              <h2>Des <span class="emphasis emphasis--red">envies</span> et des <span class="emphasis emphasis--red">économies</span> !</h2>
+              <p>Lorem ipsum et caetera pourquoi vous en avez absolument besoin, c'est la nouvelle meilleure application...</p>
               <button class="button button--red">Découvrez</button>
-            </article>
+            </div>
           </div>
         </section>
         <!-- APP DEMO -->
         <section id="demo" class="app-section app-section--demo">
-          <div class="app-wrapper">
-            
+          <div class="wrapper">
+            <div class="features-col features-col--left">
+                <div class="feature">
+                  <h3 class="align-right">Créez des listes avec vos proches</h3>
+                  <p class="align-right">Vous pouvez ajouter n'importe quel produit à vos listes d'envies et les partager si vous le souhaitez.</p>
+                </div>
+            </div>
+            <div class="features-col">
+              <div class="phone">
+                <div class="video">
+                  <video muted autoplay src="https://storage.googleapis.com/snapchat-web/download/app_store_sc1806_en-us.mp4"></video>
+                </div>
+              </div>
+            </div>
+            <div class="features-col features-col--right">
+                <div class="feature">
+                  <h3 class="align-left">Ayez l'esprit tranquille</h3>
+                  <p class="align-left">Plus besoin de surveiller les prix et les stocks, les notifications le font pour vous !</p>
+                </div>
+               
+                <div class="feature">
+                  <h3 class="align-left">Suivez vos sites préférés</h3>
+                  <ul class="platforms">
+                    <li><img width="100" src="./assets/images/amazon.svg" alt="Amazon" /></li>
+                    <li><img width="75" src="./assets/images/fnac.svg" alt="FNAC" /></li>
+                  </ul>
+                </div>
+            </div>
           </div>
         </section>
     </div>
     <footer class="app-footer">
-        <div class="app-wrapper-sm">
+        <div class="wrapper-sm">
           2018 © Bouveron, Kimoko, Metter-Rothan, Vilsaint
           <nav class="app-footer__menu">
             <a href="#">Contact</a>

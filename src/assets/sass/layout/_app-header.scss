@@ -4,8 +4,9 @@
   left:0;
   background: #ffffff;
   width: 100%;
+  z-index: 100;
 
-  .app-wrapper-sm {
+  .wrapper-sm {
     display: flex;
     height: 105px;
     align-items: center;

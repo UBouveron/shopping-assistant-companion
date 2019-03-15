@@ -11,10 +11,20 @@ html {
   font-size: 16px;
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 @import './misc/_button';
-@import './misc/_article';
+@import './misc/_feature';
+@import './misc/_intro';
+@import './misc/_phone';
+@import './layout/_wrapper';
 @import './layout/_app-header';
-@import './layout/_app-wrapper';
 @import './layout/_app-content';
 @import './layout/_app-section';
 @import './layout/_app-footer';

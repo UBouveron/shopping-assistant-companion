@@ -9,10 +9,21 @@
     left: 0;
     width: 100%;
     z-index: -1;
+
+    .wrapper {
+      align-items: center;
+      padding: 20vh 0;
+      min-height: 100vh;
+    }
   }
 
   &--demo {
     background: linear-gradient(#FB25B4, #F21F59);
     margin-top: 100vh;
+
+    .wrapper {
+      padding: 20vh 0;
+      min-height: 1060px;
+    }
   }
 }
