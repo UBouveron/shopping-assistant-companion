@@ -14,12 +14,31 @@
 }
 
 .intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-width: 675px;
 
+  @include breakpoint-laptop {
+    justify-content: center;
+    min-height: 500px;
+    max-width: calc(100% - 500px);
+  }
+
+  #illustration {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 500px;
+    height: 500px;
+    left: 100%;
+    z-index: -1;
+
+    @include breakpoint-laptop {
+      display: block;
+    }
+  }
 
   h1 {
     width: 100%;
@@ -34,10 +53,13 @@
     text-align: center;
 
     @include breakpoint-tablet {
-      text-align: left;
       font-size: 70px;
       line-height: 80px;
       margin-bottom: 32px;
+    }
+
+    @include breakpoint-laptop {
+      text-align: left;
     }
   }
 
@@ -52,10 +74,13 @@
     color: #000;
 
     @include breakpoint-tablet {
-      text-align: left;
       font-size: 70px;
       line-height: 80px;
       margin-bottom: 32px;
+    }
+
+    @include breakpoint-laptop {
+      text-align: left;
     }
   }
 
@@ -72,16 +97,24 @@
       font-size: 24px;
       line-height: 32px;
       margin-bottom: 48px;
+    }
+
+    @include breakpoint-laptop {
       text-align: left;
     }
   }
 
   .button {
     width: 100%;
+    margin: 0 auto;
+    max-width: 375px;
 
     @include breakpoint-tablet {
       width: auto;
-      max-width: 375px;
+    }
+
+    @include breakpoint-laptop {
+      margin: 0;
     }
   }
 
