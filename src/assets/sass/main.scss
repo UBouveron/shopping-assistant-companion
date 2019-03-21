@@ -12,10 +12,12 @@ html {
   font-size: 16px;
   width: 100%;
   overflow-x: hidden;
+  background: #f1f1f1;
 }
 
 @import './mixins/_breakpoints';
 
+@import './components/_loader';
 @import './components/_button';
 @import './components/_feature';
 @import './components/_intro';
