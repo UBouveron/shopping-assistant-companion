@@ -23,5 +23,5 @@ const animation = lottie.loadAnimation({
   rendrer: 'svg',
   loop: true,
   autoplay: true,
-  path: butlerJson
+  animationData: butlerJson
 });
