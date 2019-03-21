@@ -1,10 +1,10 @@
 .button {
   appearance: none;
   display: block;
-  min-width: 225px;
+  min-width: 250px;
   background: transparent;
   line-height: 37px;
-  padding: 6px 24px;
+  padding: 6px 32px;
   margin: 0;
   box-shadow: none;
   border: 3px solid #ffffff;
@@ -18,6 +18,7 @@
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  transition: all ease 0.35s;
 
   &--red {
     border-color: $red;
@@ -29,6 +30,7 @@
     margin-left: 10px;
     animation: catchy 1.5s infinite;
     -webkit-animation: catchy 1.5s infinite;
+    transition: all ease 0.35s;
 
     path {
       fill: $red;
@@ -38,7 +40,7 @@
   &:hover {
     color: #ffffff;
     background: $red;
-    transition: all ease 0.35s;
+    
   
     svg {
       path {

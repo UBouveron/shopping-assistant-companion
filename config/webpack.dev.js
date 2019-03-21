@@ -12,7 +12,7 @@ module.exports = merge(base, {
   },
   devServer: {
     contentBase: '/',
-    port: 5000,
+    port: 80,
     compress: false,
     watchContentBase: true,
     historyApiFallback: true

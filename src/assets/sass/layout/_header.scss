@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left:0;
-  background: #ffffff;
+  background: #fff;
   width: 100%;
   z-index: 100;
 
@@ -14,7 +14,7 @@
   }
 }
 
-.header-title {
+.header-logo {
   display: none;
   align-items: center;
   width: 100%;
@@ -22,12 +22,6 @@
   a {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    font-family: $title-font;
-    text-transform: capitalize;
-    font-size: 24px;
-    font-weight: 600;
-    color: $red;
 
     img {
       margin-right: 16px;
