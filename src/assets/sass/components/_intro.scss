@@ -20,6 +20,27 @@
   width: 100%;
   max-width: 675px;
 
+
+  h1 {
+    width: 100%;
+    text-decoration: none;
+    font-family: $default-font;
+    text-transform: capitalize;
+    font-size: 46px;
+    line-height: 56px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: $red;
+    text-align: center;
+
+    @include breakpoint-tablet {
+      text-align: left;
+      font-size: 70px;
+      line-height: 80px;
+      margin-bottom: 32px;
+    }
+  }
+
   h2 {
     width: 100%;
     font-family: $default-font;
@@ -57,10 +78,10 @@
 
   .button {
     width: 100%;
-    max-width: 375px;
 
     @include breakpoint-tablet {
       width: auto;
+      max-width: 375px;
     }
   }
 
