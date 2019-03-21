@@ -10,6 +10,8 @@
 html {
   font-family: $default-font;
   font-size: 16px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @import './mixins/_breakpoints';
