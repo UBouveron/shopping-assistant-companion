@@ -16,6 +16,11 @@
   @media only screen and (min-width: $breakpoint-laptop) { @content; }
 }
 
+// laptops with small vertical height available
+@mixin breakpoint-laptop-sh {
+  @media only screen and (min-width: $breakpoint-laptop) and (max-device-height: $breakpoint-laptop-sh) { @content; }
+}
+
 @mixin breakpoint-desktop {
   @media only screen and (min-width: $breakpoint-desktop) { @content; }
 }

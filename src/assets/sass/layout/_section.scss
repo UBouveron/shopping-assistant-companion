@@ -17,6 +17,10 @@
       align-items: center;
       padding: 20vh 0;
       min-height: 90vh;
+
+      @include breakpoint-laptop-sh {
+        min-height: 100vh;
+      }
     }
   }
 
@@ -26,6 +30,9 @@
 
     @include breakpoint-laptop {
       margin-top: 90vh;
+    }
+    @include breakpoint-laptop-sh {
+      margin-top: 100vh;
     }
 
     .wrapper {
