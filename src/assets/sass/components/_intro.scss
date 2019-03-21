@@ -22,16 +22,16 @@
 
   @include breakpoint-laptop {
     justify-content: center;
-    min-height: 500px;
-    max-width: calc(100% - 500px);
+    min-height: 550px;
+    max-width: calc(100% - 550px);
   }
 
   #illustration {
     display: none;
     position: absolute;
     top: 0;
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     left: 100%;
     z-index: -1;
 
