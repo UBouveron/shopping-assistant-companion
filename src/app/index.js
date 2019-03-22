@@ -30,8 +30,5 @@ lottie.loadAnimation({
 // loader
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.style.display = 'initial';
-
-  // const loader = document.getElementById('loader');
-  // loader.remove();
+  document.body.style.visibility = 'visible';
 });
