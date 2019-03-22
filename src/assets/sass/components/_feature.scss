@@ -38,6 +38,10 @@
     margin-bottom: 0;
   }
 
+  &:last-child {
+    max-width: 400px;
+  }
+
   h3 {
     width: 100%;
     font-family: $title-font;
@@ -66,10 +70,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 
   li {
     margin-right: 24px;
+    margin: 10px;
 
     &:last-child {
       margin-right: 0;
