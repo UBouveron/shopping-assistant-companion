@@ -43,7 +43,7 @@
   h1 {
     width: 100%;
     text-decoration: none;
-    font-family: $default-font;
+    font-family: $title-font;
     text-transform: capitalize;
     font-size: 46px;
     line-height: 56px;
@@ -53,9 +53,9 @@
     text-align: center;
 
     @include breakpoint-tablet {
-      font-size: 70px;
-      line-height: 80px;
-      margin-bottom: 32px;
+      font-size: 68px;
+      line-height: 78px;
+      margin-bottom: 24px;
     }
 
     @include breakpoint-laptop {
