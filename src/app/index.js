@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import '@sass/main.scss';
 
 import '@images/iPhoneX.svg';
+import '@images/share.jpg';
 
 // smooth scroll on click
 new SmoothScroll('a[href*="#"]', {
