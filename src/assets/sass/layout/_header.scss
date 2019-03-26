@@ -48,7 +48,7 @@
   justify-content: flex-end;
   flex-wrap: nowrap;
 
-  a {
+  .download-link {
     width: 100%;
     flex-grow: 1;
     flex-shrink: 1;
@@ -60,7 +60,22 @@
       flex-shrink: 0;
     }
 
-    img {
+    &.disabled {
+      cursor: default;
+      opacity: 0.3;
+
+      .download-icon {  
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .download-icon {
       width: 100%;
       height: auto;
       max-height: 48px;
@@ -69,16 +84,10 @@
         width: auto;
         height: 48px;
       }
-    }
 
-    &:last-child {
-      margin-right: 0;
+      &:hover {
+        opacity: 0.8;
+      }
     }
-  }
-}
-
-.download-icon {
-  &:hover {
-    opacity: 0.8;
   }
 }
