@@ -28,12 +28,15 @@
     border-radius: 100%;
   }
 
+  $videoWidth : 264px; // 236px
+  $videoHeight : 546px; // 420px
+
   .video {
     position: absolute;
-    left: calc((250px - 236px) / 2);
-    top: calc((520px - 420px) / 2 - 5px);
-    width: 236px;
-    height: 420px;
+    left: #{(250px - $videoWidth) / 2};
+    top: #{(520px - $videoHeight) / 2 - 5px};
+    width: $videoWidth;
+    height: $videoHeight;
     background: #221E1E;
 
     video {
