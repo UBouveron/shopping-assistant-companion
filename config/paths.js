@@ -7,4 +7,5 @@ module.exports = {
   ASSETS: path.resolve(__dirname, '../src', 'assets'),
   SASS: path.resolve(__dirname, '../src', 'assets', 'sass'),
   IMAGES: path.resolve(__dirname, '../src', 'assets', 'images'),
+  VIDEOS: path.resolve(__dirname, '../src', 'assets', 'videos'),
 };

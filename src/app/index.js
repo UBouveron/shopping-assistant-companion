@@ -9,6 +9,7 @@ import '@sass/main.scss';
 
 import '@images/iPhoneX.svg';
 import '@images/share.jpg';
+import '@videos/demo.mp4';
 
 // smooth scroll on click
 new SmoothScroll('a[href*="#"]', {
